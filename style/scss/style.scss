@@ -11,6 +11,7 @@ html{
 body{
   background: #282B35;
   min-height: 200vh;
+  overflow: hidden;
 }
 body::-webkit-scrollbar {
   width: 0.4em;
@@ -80,21 +81,20 @@ button{
     // display: none;
   }
   .hi1{
-    top: 0;
-    left: 300px;
+    transform: translateX(-570px) translateY(-180px);
   }
   .hi2{
-    top: 150px;
-    left: 5%;
-    transform: rotate(-10deg);
+    transform: rotate(-10deg) translateX(-690px) translateY(-145px);
   }
   .hi3{
-    bottom: 0;
-    left: 10%;
-    transform: rotate(2deg);
+    transform: rotate(4deg) translateX(-595px) translateY(345px);
   }
-  .hi4{}
-  .hi5{}
+  .hi4{
+    transform: rotate(4deg) translateX(575px) translateY(-215px);
+  }
+  .hi5{
+    transform: translateX(650px) translateY(-80px) rotate(12deg);
+  }
   h1{
     color: var(--Alt-Weiss, #F9F9F9);
     text-align: center;

@@ -14,6 +14,7 @@ html {
 body {
   background: #282B35;
   min-height: 200vh;
+  overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -105,20 +106,24 @@ button {
   position: absolute;
 }
 .hero .hi1 {
-  top: 0;
-  left: 300px;
+  -webkit-transform: translateX(-570px) translateY(-180px);
+          transform: translateX(-570px) translateY(-180px);
 }
 .hero .hi2 {
-  top: 150px;
-  left: 5%;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg) translateX(-690px) translateY(-145px);
+          transform: rotate(-10deg) translateX(-690px) translateY(-145px);
 }
 .hero .hi3 {
-  bottom: 0;
-  left: 10%;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
+  -webkit-transform: rotate(4deg) translateX(-595px) translateY(345px);
+          transform: rotate(4deg) translateX(-595px) translateY(345px);
+}
+.hero .hi4 {
+  -webkit-transform: rotate(4deg) translateX(575px) translateY(-215px);
+          transform: rotate(4deg) translateX(575px) translateY(-215px);
+}
+.hero .hi5 {
+  -webkit-transform: translateX(650px) translateY(-80px) rotate(12deg);
+          transform: translateX(650px) translateY(-80px) rotate(12deg);
 }
 .hero h1 {
   color: var(--Alt-Weiss, #F9F9F9);
