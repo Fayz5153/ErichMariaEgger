@@ -92,18 +92,18 @@ let selectedDiv;
 const collection__name = document.querySelector(".collection__name")
 
 collection__name.onclick = function(event) {
-    let target = event.target; // где был клик?
+    let target = event.target;
     // console.log(target)
 
-    if (target.tagName != 'A') return; // не на TD? тогда не интересует
+    if (target.tagName != 'A') return; 
 
-    highlight(target); // подсветить TD
+    highlight(target);
 };
 
 function highlight(div) {
-    if (selectedDiv) { // убрать существующую подсветку, если есть
+    if (selectedDiv) { 
     selectedDiv.classList.remove('collection__active');
     }
     selectedDiv = div;
-    selectedDiv.classList.add('collection__active'); // подсветить новый td
+    selectedDiv.classList.add('collection__active');
 }
