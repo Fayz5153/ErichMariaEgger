@@ -945,6 +945,7 @@ button {
   background: var(--White, #FFF);
   position: relative;
   padding: 0 45px;
+  cursor: pointer;
 }
 .question__info {
   color: var(--Hintergrund-Blau, #282B35);
