@@ -1,5 +1,6 @@
 {
   "liveSassCompile.settings.autoprefix": "last 2 versions",
+  "liveSassCompile.settings.generateMap": false,
   "liveSassCompile.settings.formats": [
       {
         "format": "expanded",
