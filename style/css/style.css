@@ -422,6 +422,9 @@ button {
   letter-spacing: 1.35px;
   text-transform: uppercase;
 }
+.collection__active {
+  text-decoration: underline;
+}
 .collection__description {
   color: var(--Alt-Weiss, rgba(249, 249, 249, 0.8470588235));
   text-align: center;
@@ -1008,8 +1011,7 @@ button {
   height: 672px;
   position: relative;
 }
-.contact::before {
-  content: var(--i);
+.contact__fon {
   background: rgba(33, 26, 26, 0.8);
   position: absolute;
   width: 100%;
@@ -1495,7 +1497,7 @@ button {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  .contact::before {
+  .contact__fon {
     background: #211A1A;
     font-size: 30px;
   }
@@ -1891,7 +1893,7 @@ button {
   .contact {
     padding: 20px;
   }
-  .contact::before {
+  .contact__fon {
     font-size: 18px;
   }
   .contact__subtitle {
