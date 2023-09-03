@@ -85,7 +85,7 @@
         Unsere <span>Kollektionen</span>
       </p>
       <div class="collection__name">
-        <a href="#collect">Luna</a>
+        <a href="#collect" class="collection__active">Luna</a>
         <a href="#collect">Athena</a>
         <a href="#collect">Kate</a>
         <a href="#collect">Camilla</a>
@@ -94,11 +94,11 @@
         <a href="#collect">Specials</a>
       </div>
       <p class="collection__description">
-        Unsere <span>CLIO</span> ist ein luftig-leichter Ring mit einer sechs-krappigen Fassung und mit einem Diamant im Brillantschliff. Die offene Galerie sorgt für einen harmonischen Übergang zwischen dem Ring und den Stein und sorgt so für einen eleganten und femininen Look. CLIO kann entweder schlicht als klassischer Solitärring getragen werden oder auch mit zusätzlichen Paveé-Diamanten in der Ringschiene für einen noch glänzenderen und feminineren Look.
+        LUNA Unsere <span>CLIO</span> ist ein luftig-leichter Ring mit einer sechs-krappigen Fassung und mit einem Diamant im Brillantschliff. Die offene Galerie sorgt für einen harmonischen Übergang zwischen dem Ring und den Stein und sorgt so für einen eleganten und femininen Look. CLIO kann entweder schlicht als klassischer Solitärring getragen werden oder auch mit zusätzlichen Paveé-Diamanten in der Ringschiene für einen noch glänzenderen und feminineren Look.
       </p>
       <div class="collection__cards">
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper wrapper_collection">
             <div class="swiper-slide collection__card">
               <img src="./assets/img/ring1-min.png" alt="">
               <p class="collection__card__title">750/- Gelbgold</p>
@@ -417,51 +417,12 @@
   </div>
 
   <!-- Swiper JS -->
-  <script src="./js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+  <script src="./js/script.js"></script>
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-      spaceBetween: 23,
-      navigation: {
-        nextEl: ".swiper-button-next1",
-        prevEl: ".swiper-button-prev1",
-      },
-      breakpoints:{
-        10: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1440: {
-          slidesPerView: 4,
-          spaceBetween: 23,
-        },
-      }
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-      pagination: {
-        el: ".swiper-pagination2",
-        type: "fraction",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next2",
-        prevEl: ".swiper-button-prev2",
-      },
-    });
   </script>
+  
 </body>
 </html>
