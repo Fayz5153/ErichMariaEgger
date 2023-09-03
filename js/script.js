@@ -174,7 +174,6 @@ for (let i = 0; i < collection__a.length; i++) {
 }
 let wrapper_collection = document.querySelector(".wrapper_collection")
 function addSwiper(item) {
-    console.log(item)
     wrapper_collection.innerHTML = ""
     swiper.slideTo(0, 0);
     item.map((i)=>{
