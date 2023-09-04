@@ -28,30 +28,30 @@ function SwiperInit() {
         slidesPerView: 4,
         spaceBetween: 23,
         navigation: {
-        nextEl: ".swiper-button-next1",
-        prevEl: ".swiper-button-prev1",
+            nextEl: ".swiper-button-next1",
+            prevEl: ".swiper-button-prev1",
         },
         breakpoints:{
-        10: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        1440: {
-            slidesPerView: 4,
-            spaceBetween: 23,
-        },
+            10: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1440: {
+                slidesPerView: 4,
+                spaceBetween: 23,
+            },
         }
     });
     
@@ -59,16 +59,15 @@ function SwiperInit() {
 SwiperInit()
 
 var swiper2 = new Swiper(".mySwiper2", {
-pagination: {
-    el: ".swiper-pagination2",
-    type: "fraction",
-},
-navigation: {
-    nextEl: ".swiper-button-next2",
-    prevEl: ".swiper-button-prev2",
-},
+    pagination: {
+        el: ".swiper-pagination2",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next2",
+        prevEl: ".swiper-button-prev2",
+    },
 });
-
 
 let collect__text = [
     "Luna Unsere CLIO ist ein luftig-leichter Ring mit einer sechs-krappigen Fassung und mit einem Diamant im Brillantschliff. Die offene Galerie sorgt für einen harmonischen Übergang zwischen dem Ring und den Stein und sorgt so für einen eleganten und femininen Look. CLIO kann entweder schlicht als klassischer Solitärring getragen werden oder auch mit zusätzlichen Paveé-Diamanten in der Ringschiene für einen noch glänzenderen und feminineren Look.",
@@ -162,21 +161,36 @@ for (let i = 0; i < collection__a.length; i++) {
         for (let a = 0; a < collection__a.length; a++) {
             collection__a[a].classList.remove("collection__active")
             collection__a[i].classList.add("collection__active")
-            
         }
+
         if (i % 2 === 0) {
             addSwiper(collect__data1)
         } else{
             addSwiper(collect__data2)
         }
+
         c__d.innerHTML = collect__text[i]
     }
 }
-let wrapper_collection = document.querySelector(".wrapper_collection")
-function addSwiper(item) {
-    wrapper_collection.innerHTML = ""
-    swiper.slideTo(0, 0);
-    item.map((i)=>{
+
+let collection__cards = document.querySelector(".collection__cards")
+
+async function addSwiper(item) {
+    collection__cards.innerHTML = "" 
+
+    let divSwiper = document.createElement("div")
+    divSwiper.setAttribute("class", "swiper mySwiper")
+
+    let divSwiperWrapper = document.createElement("div")
+    divSwiperWrapper.setAttribute("class", "swiper-wrapper wrapper_collection")
+
+    let divNext = document.createElement("div")
+    divNext.setAttribute("class", "swiper-button-next swiper-button-next1")
+    
+    let divPrev = document.createElement("div")
+    divPrev.setAttribute("class", "swiper-button-prev swiper-button-prev1")
+
+    await item.map((i)=>{
         let div = document.createElement("div")
         div.setAttribute("class", "swiper-slide collection__card")
 
@@ -197,12 +211,17 @@ function addSwiper(item) {
         p3.textContent = i.text3
 
         let p4 = document.createElement("p")
-        p4.setAttribute("class", "collection__card__title")
+        p4.setAttribute("class", "collection__card__price")
         p4.textContent = i.price
 
         div.append(img,p1,p2,p3,p4)
 
-        wrapper_collection.append(div)
+        divSwiperWrapper.append(div)
     })
+    divSwiper.append(divSwiperWrapper, divNext, divPrev)
+
+    collection__cards.append(divSwiper)
+
     SwiperInit()
+    
 }

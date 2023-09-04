@@ -817,6 +817,7 @@ button {
   width: 100%;
   position: relative;
   background: rgba(249, 249, 249, 0.1);
+  margin-top: 196px;
 }
 .jevely__card {
   display: grid !important;
@@ -1522,6 +1523,9 @@ button {
   .accardions {
     padding: 90px 80px;
   }
+  .jevely {
+    margin-top: 121px;
+  }
 }
 @media (max-width: 900px) {
   .navbar {
@@ -1798,8 +1802,9 @@ button {
     font-size: 70px;
     line-height: 70px;
     text-align: center;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    width: auto;
   }
   .moment__title span {
     -webkit-transform: translateX(0px);
@@ -1809,27 +1814,30 @@ button {
   .moment__img {
     grid-template-columns: 1fr 1fr;
   }
+  .moment__img div {
+    display: none;
+  }
   .moment__img div:nth-child(4n+1) {
-    grid-column: span 2;
-    grid-row: span 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    display: none;
   }
-  .moment__img div:nth-child(4n+2) {
-    grid-column: span 1;
-    grid-row: span 1;
+  .moment__img div:nth-child(1) {
+    grid-area: 3/1/4/2;
+    display: block;
   }
-  .moment__img div:nth-child(4n+3) {
-    grid-column: span 1;
-    grid-row: span 1;
+  .moment__img div:nth-child(2) {
+    grid-area: 1/1/3/3;
+    display: block;
   }
-  .moment__img div:nth-child(4n+4) {
-    grid-column: span 2;
-    grid-row: span 1;
+  .moment__img div:nth-child(3) {
+    grid-area: 4/1/6/3;
+    display: block;
+  }
+  .moment__img div:nth-child(4) {
+    grid-area: 3/2/4/3;
+    display: block;
+  }
+  .jevely {
+    margin-top: 76px;
   }
   .jevely__img {
     max-height: 320px;
@@ -1943,13 +1951,17 @@ button {
 }
 @media (max-width: 640px) {
   .collection__cards {
+    margin-bottom: 60px;
     padding: 0;
+  }
+  .collection__cards .swiper-button-next, .collection__cards .swiper-button-prev {
+    display: none;
   }
   .collection__cards::after {
     display: none;
   }
   .collection__cards .mySwiper {
-    padding: 0 50px 60px 50px;
+    padding: 0 50px 0px 50px;
   }
   .collection__cards .swiper-slide {
     opacity: 0.5;
@@ -1992,33 +2004,35 @@ button {
 }
 @media (max-width: 525px) {
   .hero__img {
-    height: 250px;
+    height: 202px;
   }
   .hero__img1 {
     -webkit-transform: rotate(5deg);
             transform: rotate(5deg);
     top: 160px;
-    width: 180px;
+    width: 190.943px;
+    height: 111.658px;
     right: 20px;
   }
   .hero__img2 {
-    width: 100px;
+    width: 123.856px;
+    height: 78.534px;
     top: 50px;
     left: 0;
   }
   .hero__img4 {
     -webkit-transform: rotate(-6deg);
             transform: rotate(-6deg);
-    width: 140px;
-    height: 170px;
+    width: 140.537px;
+    height: 172.688px;
     left: 30px;
     top: 100px;
   }
   .hero__img5 {
     -webkit-transform: rotate(13deg);
             transform: rotate(13deg);
-    width: 137px;
-    height: 150px;
+    width: 137.917px;
+    height: 151.561px;
     top: 40px;
     right: 10px;
   }
