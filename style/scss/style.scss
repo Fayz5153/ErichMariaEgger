@@ -1262,6 +1262,11 @@ button{
       }
     }
   }
+  .collection{
+    &__name, &__description{
+      padding: 0 30px;
+    }
+  }
 }
 
 @media (max-width:1250px) {

@@ -1484,6 +1484,9 @@ button {
   .challenge__img .line2::before {
     height: 287px;
   }
+  .collection__name, .collection__description {
+    padding: 0 30px;
+  }
 }
 @media (max-width: 1250px) {
   .jevely__card {
