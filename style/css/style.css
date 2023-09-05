@@ -264,6 +264,7 @@ button {
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: 55px;
+  width: 100%;
 }
 .challenge__item .cht__0 {
   color: #F9F9F9;
@@ -326,6 +327,7 @@ button {
 }
 .challenge__img img {
   max-width: 480px;
+  max-height: 259px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -666,6 +668,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 230px;
+  overflow: hidden;
 }
 .ein__title {
   color: var(--Gold, #F4D37C);
@@ -711,22 +714,39 @@ button {
 .ein__card__img {
   position: relative;
 }
-.ein__card__img::after {
-  content: "";
-  position: absolute;
-}
 .ein__card img {
   width: auto;
   height: 251px;
   margin-bottom: 60px;
 }
+.ein__card .vector {
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+.ein__card:nth-child(1) .vector1 {
+  top: -50px;
+  left: -90px;
+}
 .ein__card:nth-child(1) img {
-  -webkit-transform: rotate(-2.146deg);
-          transform: rotate(-2.146deg);
+  -webkit-transform: rotate(-2.146deg) translateX(-10px);
+          transform: rotate(-2.146deg) translateX(-10px);
+}
+.ein__card:nth-child(2) .vector2 {
+  bottom: -30px;
+  left: 20px;
 }
 .ein__card:nth-child(2) img {
   -webkit-transform: rotate(1.977deg);
           transform: rotate(1.977deg);
+}
+.ein__card:nth-child(3) .vector3 {
+  left: -30px;
+  bottom: -20px;
+}
+.ein__card:nth-child(3) img {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
 }
 .ein__card__title {
   color: var(--Alt-Weiss, #F9F9F9);
@@ -1430,11 +1450,32 @@ button {
   .challenge__item .cht__2 {
     max-width: 100%;
   }
+  .challenge__item .cht__0 {
+    max-width: 100%;
+  }
   .challenge__img {
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .challenge__img:nth-child(1) img:nth-child(1) {
+    max-width: 487px;
+  }
+  .challenge__img:nth-child(1) img:nth-child(2) {
+    max-width: 320px;
+  }
+  .challenge__img:nth-child(2) img:nth-child(1) {
+    max-width: 250px;
+    width: 100%;
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px);
+  }
+  .challenge__img:nth-child(2) img:nth-child(2) {
+    max-width: 660px;
+    width: 100%;
+    -webkit-transform: translateY(60px) translateX(-25px);
+            transform: translateY(60px) translateX(-25px);
   }
   .challenge__img .line2 {
     left: -10px;
@@ -1540,6 +1581,42 @@ button {
   }
   .jevely {
     margin-top: 121px;
+  }
+  .ein__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 100px;
+  }
+  .ein__card {
+    width: 100%;
+  }
+  .ein__card__img {
+    width: 100%;
+    height: 350px;
+  }
+  .ein__card .vector {
+    margin-bottom: 0;
+  }
+  .ein__card img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .ein__card__title {
+    text-align: center;
+  }
+  .ein__card:nth-child(3) .vector3 {
+    left: -30px;
+    bottom: -20px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
   }
 }
 @media (max-width: 900px) {
@@ -1701,6 +1778,18 @@ button {
   .challenge__img img {
     max-width: 60%;
   }
+  .challenge__img:nth-child(1) img:nth-child(1) {
+    max-width: 70%;
+  }
+  .challenge__img:nth-child(1) img:nth-child(3) {
+    max-width: 50%;
+  }
+  .challenge__img:nth-child(2) img:nth-child(1) {
+    max-width: 30%;
+  }
+  .challenge__img:nth-child(2) img:nth-child(2) {
+    max-width: 70%;
+  }
   .challenge__img .line2 {
     left: 30px;
   }
@@ -1790,12 +1879,15 @@ button {
     width: 70px;
     height: 57px;
   }
+  .ein__cards {
+    padding: 0 60px;
+  }
   .ein__card {
     width: 100%;
     padding: 0 30px;
   }
-  .ein__card img {
-    width: 100%;
+  .ein__card__img {
+    height: 250px;
   }
   .ein__card__title {
     text-align: center;
@@ -2005,6 +2097,31 @@ button {
   .info__card__description {
     font-size: 16px;
     line-height: normal;
+  }
+  .ein__cards {
+    padding: 0 30px;
+  }
+  .ein__card__img {
+    height: 150px;
+  }
+  .ein__card:nth-child(1) .vector1 {
+    top: 10%;
+    left: 45%;
+    width: 106px;
+    height: 87px;
+  }
+  .ein__card:nth-child(2) .vector2 {
+    bottom: -50px;
+    left: 20px;
+    height: 105px;
+    width: 84px;
+  }
+  .ein__card:nth-child(3) .vector3 {
+    left: -10px;
+    bottom: -10px;
+    -webkit-transform: rotate(0.223deg);
+            transform: rotate(0.223deg);
+    width: calc(100% + 10px);
   }
   .footer__bottom {
     -webkit-box-orient: vertical;

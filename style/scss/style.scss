@@ -188,6 +188,7 @@ button{
       display: flex;
       justify-content: flex-end;
       gap: 55px;
+      width: 100%;
       .cht__0{
         color: #F9F9F9;
         font-family: Lato;
@@ -244,6 +245,7 @@ button{
       }
       img{
         max-width: 480px;
+        max-height: 259px;
         object-fit: cover;
       }
       &:nth-child(1){
@@ -531,6 +533,7 @@ button{
   flex-direction: column;
   align-items: center;
   margin-top: 230px;
+  overflow: hidden;
   &__title{
     color: var(--Gold, #F4D37C);
     text-align: center;
@@ -559,32 +562,42 @@ button{
     align-items: center;
     &__img{
       position: relative;
-      &::after{
-        content: "";
-        position: absolute;
-      }
     }
     img{
       width: auto;
       height: 251px;
       margin-bottom: 60px;
     }
+    .vector{
+      position: absolute;
+      width: auto;
+      height: auto;
+    }
     &:nth-child(1){
-      .ein__card__img::after{
-        
+      .vector1{
+        top: -50px;
+        left: -90px;
       }
       img{
-        transform: rotate(-2.146deg);
+        transform: rotate(-2.146deg) translateX(-10px);
       }
     }
     &:nth-child(2){
+      .vector2{
+        bottom: -30px;
+        left: 20px;
+      }
       img{
         transform: rotate(1.977deg);
       }
     }
     &:nth-child(3){
+      .vector3{
+        left: -30px;
+        bottom: -20px;
+      }
       img{
-
+        transform: translateX(-10px);
       }
     }
     &__title{
@@ -1213,10 +1226,33 @@ button{
       .cht__2{
         max-width: 100%;
       }
+      .cht__0{
+        max-width: 100%;
+      }
     }
     &__img{
       width: 100%;
       justify-content: center;
+      &:nth-child(1){
+        img:nth-child(1){
+          max-width: 487px;
+        }
+        img:nth-child(2){
+          max-width: 320px;
+        }
+      }
+      &:nth-child(2){
+        img:nth-child(1){
+          max-width: 250px;
+          width: 100%;
+          transform:  translateX(25px);
+        }
+        img:nth-child(2){
+          max-width: 660px;
+          width: 100%;
+          transform: translateY(60px) translateX(-25px);
+        }
+      }
       .line2{
         left: -10px;
         top: 0;
@@ -1323,6 +1359,41 @@ button{
   }
   .jevely{
     margin-top: 121px;
+  }
+  .ein{
+    &__cards{
+      flex-direction: column;
+      padding: 0 100px;
+    }
+    &__card{
+      width: 100%;
+      &__img{
+        width: 100%;
+        height: 350px;
+      }
+      .vector{
+        margin-bottom: 0;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &__title{
+        text-align: center;
+      }
+      
+      &:nth-child(3){
+        .vector3{
+          left: -30px;
+          bottom: -20px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: bottom;
+        }
+      }
+    }
   }
 }
 @media (max-width:900px) {
@@ -1466,6 +1537,23 @@ button{
       img{
         max-width: 60%;
       }
+      
+      &:nth-child(1){
+        img:nth-child(1){
+          max-width: 70%;
+        }
+        img:nth-child(3){
+          max-width: 50%;
+        }
+      }
+      &:nth-child(2){
+        img:nth-child(1){
+          max-width: 30%;
+        }
+        img:nth-child(2){
+          max-width: 70%;
+        }
+      }
       .line2{
         left: 30px;
       }
@@ -1551,11 +1639,14 @@ button{
     }
   }
   .ein{
+    &__cards{
+      padding: 0 60px;
+    }
     &__card{
       width: 100%;
       padding: 0 30px;
-      img{
-        width: 100%;
+      &__img{
+        height: 250px;
       }
       &__title{
         text-align: center;
@@ -1784,6 +1875,40 @@ button{
       &__description{
         font-size: 16px;
         line-height: normal;
+      }
+    }
+  }
+  .ein{
+    &__cards{
+      padding: 0 30px;
+    }
+    &__card{
+      &__img{
+        height: 150px;
+      }
+      &:nth-child(1){
+        .vector1{
+          top: 10%;
+          left: 45%;
+          width: 106px;
+          height: 87px;
+        }
+      }
+      &:nth-child(2){
+        .vector2{
+          bottom: -50px;
+          left: 20px;
+          height: 105px;
+          width: 84px;
+        }
+      }
+      &:nth-child(3){
+        .vector3{
+          left: -10px;
+          bottom: -10px;
+          transform: rotate(0.223deg);
+          width: calc(100% + 10px);
+        }
       }
     }
   }
