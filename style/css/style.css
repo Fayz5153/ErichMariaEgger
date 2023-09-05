@@ -708,10 +708,25 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+.ein__card__img {
+  position: relative;
+}
+.ein__card__img::after {
+  content: "";
+  position: absolute;
+}
 .ein__card img {
   width: auto;
   height: 251px;
   margin-bottom: 60px;
+}
+.ein__card:nth-child(1) img {
+  -webkit-transform: rotate(-2.146deg);
+          transform: rotate(-2.146deg);
+}
+.ein__card:nth-child(2) img {
+  -webkit-transform: rotate(1.977deg);
+          transform: rotate(1.977deg);
 }
 .ein__card__title {
   color: var(--Alt-Weiss, #F9F9F9);

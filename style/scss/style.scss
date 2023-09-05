@@ -557,10 +557,35 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    &__img{
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+      }
+    }
     img{
       width: auto;
       height: 251px;
       margin-bottom: 60px;
+    }
+    &:nth-child(1){
+      .ein__card__img::after{
+        
+      }
+      img{
+        transform: rotate(-2.146deg);
+      }
+    }
+    &:nth-child(2){
+      img{
+        transform: rotate(1.977deg);
+      }
+    }
+    &:nth-child(3){
+      img{
+
+      }
     }
     &__title{
       color: var(--Alt-Weiss, #F9F9F9);
