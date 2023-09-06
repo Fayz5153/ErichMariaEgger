@@ -4,6 +4,14 @@ const answer__text = document.querySelectorAll(".answer__text")
 const question = document.querySelectorAll(".question")
 
 if (question) {
+    window.addEventListener("resize", function(e){
+        // console.log(e.target.innerWidth)
+        QuestInit()
+    });
+    QuestInit()
+}
+
+function QuestInit() {
   for (let i = 0; i < question.length; i++) {
     let answer_height = answer__text[i].clientHeight
     // console.log(answer_height)
@@ -27,6 +35,9 @@ function SwiperInit() {
     swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
         spaceBetween: 23,
+        grid: {
+            rows: 1,
+        },
         navigation: {
             nextEl: ".swiper-button-next1",
             prevEl: ".swiper-button-prev1",
@@ -40,13 +51,23 @@ function SwiperInit() {
                 slidesPerView: 1,
                 spaceBetween: 20,
             },
-            768: {
+            850: {
                 slidesPerView: 2,
                 spaceBetween: 20,
+                grid: {
+                    rows: 2,
+                },
             },
             1024: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 20,
+                grid: {
+                    rows: 2,
+                },
+            },
+            1200: {
+                slidesPerView: 4,
+                spaceBetween: 23,
             },
             1440: {
                 slidesPerView: 4,
@@ -68,6 +89,14 @@ var swiper2 = new Swiper(".mySwiper2", {
         prevEl: ".swiper-button-prev2",
     },
 });
+
+window.addEventListener("resize", function(e){
+    // console.log(e.target.innerWidth)
+    SwiperInit()
+    
+});
+
+// For category Filter
 
 let collect__text = [
     "Luna Unsere CLIO ist ein luftig-leichter Ring mit einer sechs-krappigen Fassung und mit einem Diamant im Brillantschliff. Die offene Galerie sorgt für einen harmonischen Übergang zwischen dem Ring und den Stein und sorgt so für einen eleganten und femininen Look. CLIO kann entweder schlicht als klassischer Solitärring getragen werden oder auch mit zusätzlichen Paveé-Diamanten in der Ringschiene für einen noch glänzenderen und feminineren Look.",
