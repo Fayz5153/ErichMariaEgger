@@ -1615,7 +1615,7 @@ button {
     height: calc((100% - 30px) / 2) !important;
   }
   .collection .wrapper_collection {
-    height: 700px;
+    height: 800px;
   }
 }
 @media (max-width: 1140px) {
