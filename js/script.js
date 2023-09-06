@@ -58,6 +58,13 @@ function SwiperInit() {
                     rows: 2,
                 },
             },
+            950: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                grid: {
+                    rows: 2,
+                },
+            },
             1024: {
                 slidesPerView: 3,
                 spaceBetween: 20,
