@@ -1616,6 +1616,45 @@ button {
     height: 800px;
   }
 }
+@media (max-width: 1180px) {
+  .ein__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 100px;
+  }
+  .ein__card {
+    width: 100%;
+  }
+  .ein__card__img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+  }
+  .ein__card .vector {
+    margin-bottom: 0;
+  }
+  .ein__card img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .ein__card__title {
+    text-align: center;
+  }
+  .ein__card:nth-child(3) .vector3 {
+    left: -30px;
+    bottom: -20px;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+}
 @media (max-width: 1140px) {
   .contact__container {
     padding: 170px 100px 70px 100px;
@@ -1649,42 +1688,6 @@ button {
   }
   .jevely {
     margin-top: 121px;
-  }
-  .ein__cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0 100px;
-  }
-  .ein__card {
-    width: 100%;
-  }
-  .ein__card__img {
-    width: 100%;
-    height: 350px;
-  }
-  .ein__card .vector {
-    margin-bottom: 0;
-  }
-  .ein__card img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .ein__card__title {
-    text-align: center;
-  }
-  .ein__card:nth-child(3) .vector3 {
-    left: -30px;
-    bottom: -20px;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: bottom;
-       object-position: bottom;
   }
 }
 @media (max-width: 900px) {
@@ -2252,15 +2255,19 @@ button {
   }
   .hero__img1 {
     top: 160px;
-    right: 20px;
+    right: 25px;
   }
   .hero__img2 {
     top: 50px;
     left: 0;
+    width: 123.856px;
+    height: 78.534px;
+    -o-object-position: top;
+       object-position: top;
   }
   .hero__img4 {
-    left: 30px;
-    top: 100px;
+    left: 55px;
+    top: 110px;
   }
   .hero__img5 {
     top: 40px;
